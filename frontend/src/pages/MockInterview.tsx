@@ -49,7 +49,7 @@ function MockInterview() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/interview/submit",
+        "https://scorvue.onrender.com/api/interview/submit",
         {
           method: "POST",
           headers: {
