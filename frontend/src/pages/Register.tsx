@@ -44,7 +44,7 @@ function Register() {
       setLoading(true);
 
       const response = await fetch(
-        "https://scorvue.onrender.com/api/auth/register",
+        "http://localhost:5000/api/auth/register",
         {
           method: "POST",
           headers: {
@@ -98,7 +98,7 @@ function Register() {
       setLoading(true);
 
       const response = await fetch(
-        "https://scorvue.onrender.com/api/auth/verify-register-otp",
+        "http://localhost:5000/api/auth/verify-register-otp",
         {
           method: "POST",
           headers: {

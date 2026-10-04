@@ -57,7 +57,7 @@ const submitCode = async () => {
 
   try {
     const response = await fetch(
-      "https://scorvue.onrender.com/api/coding/submit",
+      "http://localhost:5000/api/coding/submit",
       {
         method: "POST",
         headers: {

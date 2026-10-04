@@ -53,7 +53,7 @@ function Login() {
       setLoading(true);
 
       const response = await fetch(
-         "https://scorvue.onrender.com/api/auth/login",
+         "http://localhost:5000/api/auth/login",
         //"https://kjl9w4s4-5000.inc1.devtunnels.ms/api/auth/login",
         {
           method: "POST",
@@ -108,7 +108,7 @@ function Login() {
       setLoading(true);
 
       const response = await fetch(
-         "https://scorvue.onrender.com/api/auth/verify-login-otp",
+         "http://localhost:5000/api/auth/verify-login-otp",
         // "https://kjl9w4s4-5000.inc1.devtunnels.ms/api/auth/verify-login-otp",
         {
           method: "POST",
@@ -178,7 +178,7 @@ function Login() {
       setLoading(true);
 
       const response = await fetch(
-         "https://scorvue.onrender.com/api/auth/forgot-password",
+         "http://localhost:5000/api/auth/forgot-password",
         //"https://kjl9w4s4-5000.inc1.devtunnels.ms/api/auth/forgot-password",
 
         {
@@ -244,7 +244,7 @@ function Login() {
       setLoading(true);
 
       const response = await fetch(
-         "https://scorvue.onrender.com/api/auth/verify-forgot-password-otp",
+         "http://localhost:5000/api/auth/verify-forgot-password-otp",
         // "https://kjl9w4s4-5000.inc1.devtunnels.ms/api/auth/forgot-password",
         {
           method: "POST",
@@ -315,7 +315,7 @@ function Login() {
       setLoading(true);
 
       const response = await fetch(
-         "https://scorvue.onrender.com/api/auth/reset-password",
+         "http://localhost:5000/api/auth/reset-password",
         // "https://kjl9w4s4-5000.inc1.devtunnels.ms/api/auth/reset-password",
         {
           method: "POST",
