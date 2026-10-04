@@ -1,0 +1,177 @@
+.coding-page {
+  min-height: 100vh;
+  padding: 40px;
+  background: #080b14;
+  color: white;
+}
+
+.coding-header {
+  max-width: 1100px;
+  margin: 0 auto 30px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.coding-label {
+  margin: 0 0 5px;
+  color: #6366f1;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.coding-header h1 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.coding-container {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 20px;
+}
+
+.question-list,
+.problem-card,
+.code-card {
+  background: #101522;
+  border: 1px solid #202738;
+  border-radius: 15px;
+}
+
+.question-list {
+  padding: 20px;
+  height: fit-content;
+}
+
+.question-list h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.coding-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  padding: 12px;
+  border: 1px solid #252b3a;
+  border-radius: 10px;
+  background: #0b0f18;
+  color: #aaa;
+  text-align: left;
+  cursor: pointer;
+}
+
+.coding-question span {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #202638;
+  color: white;
+  font-size: 12px;
+}
+
+.coding-question.active {
+  border-color: #6366f1;
+  background: #171a35;
+  color: white;
+}
+
+.coding-workspace {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.problem-card {
+  padding: 25px;
+}
+
+.problem-number {
+  color: #6366f1;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.problem-card h2 {
+  margin: 10px 0;
+}
+
+.problem-card p {
+  color: #9ca3af;
+  line-height: 1.6;
+}
+
+.problem-card pre {
+  padding: 15px;
+  border-radius: 10px;
+  background: #0b0f18;
+  color: #c7cad4;
+  white-space: pre-wrap;
+}
+
+.code-card {
+  padding: 25px;
+}
+
+.code-card label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.code-card textarea {
+  width: 100%;
+  min-height: 250px;
+  box-sizing: border-box;
+  padding: 15px;
+  resize: vertical;
+  border: 1px solid #292f40;
+  border-radius: 10px;
+  outline: none;
+  background: #080b14;
+  color: white;
+  font-family: Consolas, monospace;
+}
+
+.code-card textarea:focus {
+  border-color: #6366f1;
+}
+
+.submit-code-btn {
+  margin-top: 15px;
+  padding: 13px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #6366f1;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.code-result {
+  margin-top: 15px;
+  padding: 14px;
+  border-radius: 10px;
+  background: #111a18;
+  color: #8ee6a8;
+}
+
+@media (max-width: 800px) {
+  .coding-page {
+    padding: 20px;
+  }
+
+  .coding-container {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,597 @@
+/* ================================
+   SCORVUE AUTHENTICATION UI
+   Login + Register
+================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  background: #07111f;
+  color: #ffffff;
+}
+
+/* ================================
+   LEFT INFORMATION SECTION
+================================ */
+
+.auth-info {
+  width: 50%;
+  min-height: 100vh;
+  padding: 45px 7%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.15), transparent 35%),
+    #081525;
+  border-right: 1px solid #17283c;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.brand-icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 11px;
+  background: #3b82f6;
+  color: white;
+  font-size: 20px;
+  font-weight: 800;
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.25);
+}
+
+.brand-highlight {
+  color: #3b82f6;
+}
+
+.info-content {
+  max-width: 540px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.small-heading {
+  color: #60a5fa;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+
+.info-content h1 {
+  font-size: clamp(45px, 5vw, 70px);
+  line-height: 1.02;
+  margin: 0;
+  letter-spacing: -2px;
+}
+
+.info-content h1 span {
+  color: #3b82f6;
+}
+
+.info-text {
+  max-width: 500px;
+  margin-top: 25px;
+  color: #94a3b8;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.feature-list {
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+.feature-icon {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(59, 130, 246, 0.15);
+  color: #60a5fa;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.copyright {
+  color: #475569;
+  font-size: 12px;
+}
+
+/* ================================
+   RIGHT FORM SECTION
+================================ */
+
+.auth-form-section {
+  width: 50%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 45px 7%;
+  background: #07111f;
+}
+
+.auth-form-card {
+  width: 100%;
+  max-width: 470px;
+}
+
+.mobile-brand {
+  display: none;
+}
+
+/* ================================
+   FORM HEADING
+================================ */
+
+.form-heading {
+  margin-bottom: 32px;
+}
+
+.welcome-text {
+  color: #60a5fa;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin: 0 0 10px;
+}
+
+.form-heading h2 {
+  font-size: 36px;
+  margin: 0 0 10px;
+  letter-spacing: -1px;
+}
+
+.form-heading p:last-child {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ================================
+   INPUT GROUP
+================================ */
+
+.input-group {
+  margin-bottom: 19px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #cbd5e1;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.input-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #64748b;
+  font-size: 15px;
+  pointer-events: none;
+}
+
+.input-wrapper input {
+  width: 100%;
+  height: 52px;
+  padding: 0 16px 0 45px;
+  border: 1px solid #26384d;
+  border-radius: 10px;
+  outline: none;
+  background: #0c1a2b;
+  color: #ffffff;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.input-wrapper input::placeholder {
+  color: #475569;
+}
+
+.input-wrapper input:hover {
+  border-color: #38516d;
+}
+
+.input-wrapper input:focus {
+  border-color: #3b82f6;
+  background: #0d1e32;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.input-wrapper input:focus + * {
+  color: #60a5fa;
+}
+
+/* ================================
+   MAIN BUTTON
+================================ */
+
+.login-btn {
+  width: 100%;
+  height: 52px;
+  margin-top: 7px;
+  border: none;
+  border-radius: 10px;
+  background: #3b82f6;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: 0.2s;
+}
+
+.login-btn span {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.login-btn:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.2);
+}
+
+.login-btn:active {
+  transform: translateY(0);
+}
+
+.login-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ================================
+   DIVIDER
+================================ */
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 28px 0 20px;
+  color: #475569;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #1c2d42;
+}
+
+.divider span {
+  padding: 0 5px;
+}
+
+/* ================================
+   LOGIN / REGISTER LINK
+================================ */
+
+.register-text {
+  text-align: center;
+  color: #64748b;
+  font-size: 13px;
+  margin: 0;
+}
+
+.register-text a {
+  color: #60a5fa;
+  text-decoration: none;
+  font-weight: 700;
+  margin-left: 5px;
+}
+
+.register-text a:hover {
+  color: #93c5fd;
+  text-decoration: underline;
+}
+
+/* ================================
+   OTP OVERLAY
+================================ */
+
+.otp-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(2, 8, 23, 0.78);
+  backdrop-filter: blur(8px);
+}
+
+/* ================================
+   OTP CARD
+================================ */
+
+.otp-card {
+  position: relative;
+  width: 100%;
+  max-width: 430px;
+  padding: 38px 35px;
+
+  border: 1px solid #26384d;
+  border-radius: 18px;
+
+  background: #0b192a;
+
+  text-align: center;
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.5),
+    0 0 40px rgba(59, 130, 246, 0.08);
+}
+
+/* ================================
+   OTP CLOSE BUTTON
+================================ */
+
+.otp-close {
+  position: absolute;
+  top: 15px;
+  right: 17px;
+
+  width: 32px;
+  height: 32px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: transparent;
+  color: #64748b;
+
+  font-size: 24px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.otp-close:hover {
+  background: #17283c;
+  color: #ffffff;
+}
+
+/* ================================
+   OTP ICON
+================================ */
+
+.otp-circle {
+  width: 65px;
+  height: 65px;
+
+  margin: 0 auto 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(59, 130, 246, 0.12);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+
+  color: #60a5fa;
+
+  font-size: 27px;
+}
+
+/* ================================
+   OTP TEXT
+================================ */
+
+.otp-label {
+  color: #60a5fa;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.otp-card h2 {
+  margin: 0 0 10px;
+  font-size: 27px;
+}
+
+.otp-description {
+  margin: 0 auto 5px;
+  max-width: 310px;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* ================================
+   OTP INPUT
+================================ */
+
+.otp-input {
+  width: 100%;
+  height: 58px;
+
+  margin: 18px 0 15px;
+
+  border: 1px solid #26384d;
+  border-radius: 10px;
+
+  outline: none;
+
+  background: #07111f;
+  color: #ffffff;
+
+  text-align: center;
+
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 8px;
+
+  transition: 0.2s;
+}
+
+.otp-input::placeholder {
+  color: #334155;
+  letter-spacing: 6px;
+}
+
+.otp-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* ================================
+   OTP FOOTER
+================================ */
+
+.otp-footer {
+  margin: 20px 0 0;
+
+  color: #64748b;
+  font-size: 12px;
+}
+
+.otp-footer button {
+  border: none;
+  background: transparent;
+
+  color: #60a5fa;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.otp-footer button:hover {
+  color: #93c5fd;
+}
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+
+@media (max-width: 950px) {
+  .auth-info {
+    width: 45%;
+    padding: 35px 5%;
+  }
+
+  .auth-form-section {
+    width: 55%;
+    padding: 35px 5%;
+  }
+
+  .info-content h1 {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 750px) {
+  .auth-page {
+    display: block;
+  }
+
+  .auth-info {
+    display: none;
+  }
+
+  .auth-form-section {
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px 22px;
+  }
+
+  .auth-form-card {
+    max-width: 480px;
+  }
+
+  .mobile-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    margin-bottom: 45px;
+
+    font-size: 23px;
+    font-weight: 800;
+  }
+
+  .mobile-brand .brand-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+  }
+
+  .form-heading h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 450px) {
+  .auth-form-section {
+    padding: 25px 17px;
+  }
+
+  .form-heading h2 {
+    font-size: 29px;
+  }
+
+  .otp-card {
+    padding: 35px 22px;
+  }
+
+  .otp-input {
+    letter-spacing: 5px;
+  }
+}
