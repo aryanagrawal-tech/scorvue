@@ -75,7 +75,7 @@ function Login() {
       }
 
       alert(
-        "OTP successfully sent to your registered Gmail"
+         "OTP successfully sent.\nPlease check your spam folder if you don't receive the OTP in your inbox."
       );
 
       setOtp("");
